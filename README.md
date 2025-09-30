@@ -17,7 +17,6 @@ Os filmes são salvos em um banco SQLite e podem ser consultados via API com pag
 ### 1. Clonar o repositório
 
 ```
-bash
 git clone https://github.com/seu-usuario/streamer_master_web.git
 cd streamer_master_web
 ```
@@ -26,7 +25,7 @@ cd streamer_master_web
 
 Windows (PowerShell):
 
-```bash
+```
 python -m venv venv
 venv\Scripts\activate
 ```
@@ -34,7 +33,6 @@ venv\Scripts\activate
 Linux/Mac:
 
 ```
-bash
 python3 -m venv venv
 source venv/bin/activate
 ```
@@ -42,14 +40,12 @@ source venv/bin/activate
 ### 3. Instalar dependências
 
 ```
-bash
 pip install -r requirements.txt
 ```
 
 ### 4. Rodar a aplicação FastAPI com Uvicorn
 
 ```
-bash
 uvicorn main:app
 ```
 
@@ -65,14 +61,12 @@ Por padrão a API sobe em:
 Faz scraping de `/feature_movies` e `/cartoons`, salva no banco e retorna resumo:
 
 ```
-http
 GET /filmes
 ```
 
 Exemplo de resposta:
 
 ```
-json
 {
   "status": "✅ Finalizado",
   "novos": 120,
@@ -87,14 +81,12 @@ json
 Consulta filmes já salvos no banco, com paginação e filtro opcional por título:
 
 ```
-http
 GET /filmesListar?page=1&size=10&titulo=night
 ```
 
 Exemplo de resposta:
 
 ```
-json
 {
   "page": 1,
   "size": 10,
@@ -117,7 +109,6 @@ json
 Apaga todos os registros da tabela de mídias:
 
 ```
-http
 DELETE /reset
 ```
 
