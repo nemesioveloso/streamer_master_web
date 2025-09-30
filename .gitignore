@@ -1,0 +1,19 @@
+# Ignorar ambiente virtual
+venv/
+ENV/
+.venv/
+
+# Ignorar cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar banco SQLite (se não quiser versionar)
+*.db
+
+# Ignorar arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar logs
+*.log
